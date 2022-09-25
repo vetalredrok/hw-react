@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import {Link, Route, Routes} from "react-router-dom";
+
+import {Albums, Comments, Home, Todos, Post} from "./components";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul>
+          <li><Link to={'/'}>Home page</Link></li>
+        <li><Link to={'/todos'}>All todos page</Link></li>
+        <li><Link to={'/albums'}>All albums page</Link></li>
+        <li><Link to={'/comments'}>All comments page</Link></li>
+      </ul>
+
+      <Routes>
+        <Route index element={<Home/>}/>
+        <Route path={'todos'} element={<Todos/>}/>
+        <Route path={'albums'} element={<Albums/>}/>
+        <Route path={'comments'} element={<Comments/>}>
+            <Route path={'posts/:id'} element={<Post/>}/>
+
+        </Route>
+
+      </Routes>
+
+
+
     </div>
   );
 }
