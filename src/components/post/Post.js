@@ -21,6 +21,10 @@ function Post() {
             <h5>userId author Post: {post.userId} - id Post:{post.id}</h5>
             <p>{post.title}</p>
             <p>{post.body}</p>
+
+
+
+
         </div>
     );
 }
