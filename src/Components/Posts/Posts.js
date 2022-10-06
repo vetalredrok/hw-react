@@ -3,29 +3,28 @@ import {useDispatch, useSelector} from "react-redux";
 
 import {userService} from "../../Services";
 import {actions} from "../../Redux";
-import {User} from "../User/User";
+import {Post} from "../Post/Post";
 
-const Users = () => {
+const Posts = () => {
 
-    const state = useSelector(state => state.userReducer);
+    const state = useSelector(state=> state.postReducer);
     console.log(state);
+
     const dispatch = useDispatch();
 
-    useEffect(()=>{
-        userService.getAllUsers().then(({data})=>{
-            dispatch({type: actions.loadUsers, payload: data})
+    useEffect(() => {
+        userService.getAllPosts().then(({data})=>{
+            dispatch({type: actions.loadPosts, payload: data})
         });
-
     }, []);
-
 
     return (
         <div>
             {
-                state.users.map(value => <User key={value.id} user={value}/>)
+                state.posts.map(value => <Post key={value.id} post={value}/>)
             }
         </div>
     );
 };
 
-export {Users};
+export {Posts};

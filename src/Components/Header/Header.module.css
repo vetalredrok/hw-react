@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 0;
+}
+
+.header__box{
+    height: 40px;
+    background: rgba(130, 59, 152, 0.09);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px
+}
+
+.header__box a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    border: 2px solid;
+    padding: 3px;
+    border-radius: 15px;
+}
