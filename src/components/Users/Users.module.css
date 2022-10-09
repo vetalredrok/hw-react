@@ -1,0 +1,29 @@
+.Users{
+    display: flex;
+    justify-content: space-around;
+}
+
+.UsersBlock{
+    width: 600px;
+}
+
+.CurrentUser{
+    margin-top: 10px;
+    width: 600px;
+    height: 800px;
+    border: 3px solid slateblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.User{
+    height: 350px;
+    margin: 10px;
+    width: 550px;
+    border: 2px #c02929 solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

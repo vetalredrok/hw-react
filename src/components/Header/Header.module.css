@@ -1,0 +1,16 @@
+.Header{
+    height: 40px;
+    background: blanchedalmond;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 50px;
+}
+
+.Header a{
+    margin: 40px;
+    border: 3px black solid;
+    padding: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
